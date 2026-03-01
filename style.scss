@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-body);;
+     font-family: "Barrio", system-ui;
+}
+.main{
+  min-height: 100vh;
+  display: flex; /* ჩავრთოთ ფლექსი */
+  flex-direction: column; /* ელემენტები დალაგდეს ვერტიკალურად */
+  align-items: center; /* გაასწოროს ჰორიზონტალურ ცენტრში */
+ padding-top: 40px;
+ 
+}
+
+.img-main{
+  position: absolute;
+  width: 100%;
+  top: 0;         /* დაამატე ეს */
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  height: 300px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 540px;
+  margin-bottom: 40px;
+}
+
+.todo{
+  width: 167px;
+  height: 40px;
+  
+  letter-spacing: 15px;
+  text-align: left;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.suun{
+width: 26px;
+  height: 26px;
+ 
+  object-fit: contain;
+ cursor: pointer;
+}
+
+.create-new{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+   width: 540px;
+  height: 64px;
+
+  
+  border-radius: 5px;
+  box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-card);;
+
+}
+.oval-copy {
+  width: 24px;
+  height: 24px;
+  margin: 0 24px 0 0;
+  border: solid 1px #a5a5b3;
+  border-radius: 50%;
+ justify-content:space-between;
+ display: flex;
+ 
+
+}
+.first{
+    display: flex;
+    align-items: start;
+    justify-content: left;
+}
+
+
+p{
+    
+  
+  font-size: 14px;
+  
+  letter-spacing: -0.19px;
+  text-align: left;
+  color:var(--text-main);
+}
+
+.Rectangle {
+  width: 540px;
+  height: auto;
+  
+  margin-top: 24px;
+  
+  border-radius: 5px;
+  box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-card);;
+  
+}
+.column{display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top:20px ;
+    margin-left: 24px;
+    
+    
+}
+.last{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-left:10px ;
+ margin-top:20px ;
+ margin-right:10px;
+    margin-bottom: 10px;
+
+}
+.sas{
+   display: flex;
+  justify-content: center; /* ცენტრში მოაქციოს შიდა ტექსტები */
+  gap: 15px;
+    
+
+}
+.sas p {
+  cursor: pointer; /* რომ მიხვდეს მომხმარებელი, რომ კლიკებადია */
+  font-weight: bold;
+}
+.clear{
+    
+  cursor: pointer; /* რომ მიხვდეს მომხმარებელი, რომ კლიკებადია */
+  font-weight: bold;
+
+}
+.todo-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 64px;       /* ხაზის სიმაღლე */
+    padding: 0 24px;
+    background-color: var(--todo-do);;
+    /* აი ეს ქმნის ხაზს ქვევიდან */
+    border-bottom: 1px solid #393a4b;
+}
+
+:root {
+  /* მუქი რეჟიმის ფერები */
+  --bg-body: #171823;
+  --bg-card: #25273d;
+  --text-main: #c8cbe7;
+  --todo-do: #25273d;
+}
+body.light-theme {
+  /* ნათელი რეჟიმის ფერები */
+  --bg-body: #fafafa;
+  --bg-card: #ffffff;
+  --text-main: #494c6b;
+  --todo-do: #d4d4d4;
+}
+#todo-input {
+    width: 100%;
+    background: transparent; /* ფონი რომ არ ჰქონდეს */
+    border: none;            /* ჩარჩო რომ არ ჰქონდეს */
+    outline: none;           /* დაწკაპუნებისას ლურჯი ხაზი რომ არ გამოჩნდეს */
+    color: var(--text-main); /* შენი ფერების ცვლადი */
+    font-family: inherit;    /* ფონტი რომ იგივე დარჩეს */
+    font-size: 18px;
+}
+
+.todo-item{
+    display: flex;
+    
+}
+
+.todo-item.completed p {
+    text-decoration: line-through;
+    color: solid red;
+    opacity: 0.22;
+}
